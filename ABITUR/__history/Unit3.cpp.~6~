@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "Unit5.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFsets *Fsets;
+
+
+//---------------------------------------------------------------------------
+__fastcall TFsets::TFsets(TComponent* Owner)
+	: TForm(Owner)
+{
+	//code
+}
+//---------------------------------------------------------------------------
+void __fastcall TFsets::BreturnClick(TObject *Sender)
+{
+	Fpincd->Close();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFsets::Bsave1Click(TObject *Sender)
+{
+	bool flag=true;
+	if(LEpin1->Text!=DM->Qacc3code->AsString) {
+		Label1->Visible=true;
+		flag=false;
+	}
+	if(LEpin2->Text!=LEpin3->Text) {
+		Label2->Visible=true;
+		flag=false;
+	}
+	if(flag){
+        DM->Qacc3
+		DM->Qacc3code->AsString;
+	}
+}
+//---------------------------------------------------------------------------
+

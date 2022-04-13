@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit10H
+#define Unit10H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include "frxClass.hpp"
+#include "frxDBSet.hpp"
+#include "frxPreview.hpp"
+//---------------------------------------------------------------------------
+class TFrep3 : public TForm
+{
+__published:	// IDE-managed Components
+	TfrxPreview *Frep3;
+	TfrxReport *frxReport1;
+	TfrxDBDataset *frxDBDataset1;
+	TfrxDBDataset *frxDBDataset2;
+	TfrxDBDataset *frxDBDataset3;
+	TfrxDBDataset *frxDBDataset4;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFrep3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFrep3 *Frep3;
+//---------------------------------------------------------------------------
+#endif

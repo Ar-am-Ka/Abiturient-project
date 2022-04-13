@@ -1,0 +1,40 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit10H
+#define Unit10H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include "frxClass.hpp"
+#include "frxDBSet.hpp"
+#include "frxPreview.hpp"
+#include <Bde.DBTables.hpp>
+#include <Data.DB.hpp>
+//---------------------------------------------------------------------------
+class TFrep3 : public TForm
+{
+__published:	// IDE-managed Components
+	TfrxPreview *Frep3;
+	TfrxReport *frxReport1;
+	TfrxDBDataset *frxDBDataset1;
+	TfrxDBDataset *frxDBDataset2;
+	TQuery *Qrep3det;
+	TIntegerField *Qrep3detid_enr;
+	TStringField *Qrep3detlast_name;
+	TStringField *Qrep3detfirst_name;
+	TStringField *Qrep3detpatronymic_name;
+	TStringField *Qrep3dethonors;
+	TSmallintField *Qrep3detexam_1;
+	TSmallintField *Qrep3detexam_2;
+	TIntegerField *Qrep3detres;
+	TIntegerField *Qrep3detid_fac;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFrep3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFrep3 *Frep3;
+//---------------------------------------------------------------------------
+#endif

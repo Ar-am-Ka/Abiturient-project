@@ -1,0 +1,81 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "Unit4.h"
+#include "Unit5.h"
+#include "Unit7.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFstart *Fstart;
+//---------------------------------------------------------------------------
+__fastcall TFstart::TFstart(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFstart::N1Click(TObject *Sender)
+{
+	Fabout->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFstart::Button1Click(TObject *Sender)
+{
+	Finputedit->Show();
+}
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TFstart::N7Click(TObject *Sender)
+{
+	Fsets->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TFstart::N10Click(TObject *Sender)
+{
+	Finputedit->Show();
+	Finputedit->PG1->ActivePageIndex=1;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFstart::N11Click(TObject *Sender)
+{
+	Finputedit->Show();
+	Finputedit->PG1->ActivePageIndex=2;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFstart::Button2Click(TObject *Sender)
+{
+	Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFstart::N12Click(TObject *Sender)
+{
+	Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+

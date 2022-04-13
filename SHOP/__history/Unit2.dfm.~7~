@@ -1,0 +1,127 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 355
+  Width = 431
+  object Tcl: TTable
+    Active = True
+    DatabaseName = 'DB1'
+    TableName = 'client'
+    Left = 144
+    Top = 112
+    object Tclid_client: TIntegerField
+      FieldName = 'id_client'
+      Required = True
+    end
+    object TclFIO: TStringField
+      FieldName = 'FIO'
+    end
+    object TclPhone: TIntegerField
+      FieldName = 'Phone'
+    end
+  end
+  object Database1: TDatabase
+    AliasName = 'Shop'
+    Connected = True
+    DatabaseName = 'DB1'
+    SessionName = 'Default'
+    Left = 64
+    Top = 72
+  end
+  object Tit: TTable
+    Active = True
+    DatabaseName = 'DB1'
+    TableName = 'item'
+    Left = 184
+    Top = 112
+    object Titid_item: TIntegerField
+      DisplayLabel = ' '#8470
+      DisplayWidth = 4
+      FieldName = 'id_item'
+      Required = True
+    end
+    object Titid_cat: TIntegerField
+      DisplayWidth = 12
+      FieldName = 'id_cat'
+    end
+    object Titname: TStringField
+      DisplayWidth = 35
+      FieldName = 'name'
+    end
+    object Titcat: TStringField
+      DisplayWidth = 22
+      FieldKind = fkLookup
+      FieldName = 'cat'
+      LookupDataSet = Tca
+      LookupKeyFields = 'id_cat'
+      LookupResultField = 'name_cat'
+      KeyFields = 'id_cat'
+      Lookup = True
+    end
+    object Titprice: TIntegerField
+      DisplayWidth = 5
+      FieldName = 'price'
+    end
+    object Titavailable: TIntegerField
+      DisplayWidth = 4
+      FieldName = 'available'
+    end
+  end
+  object Tca: TTable
+    Active = True
+    DatabaseName = 'DB1'
+    TableName = 'category'
+    Left = 224
+    Top = 112
+    object Tcaid_cat: TIntegerField
+      DisplayWidth = 12
+      FieldName = 'id_cat'
+      Required = True
+    end
+    object Tcaname_cat: TStringField
+      DisplayWidth = 22
+      FieldName = 'name_cat'
+    end
+  end
+  object Tsa: TTable
+    DatabaseName = 'DB1'
+    TableName = 'sale'
+    Left = 264
+    Top = 112
+    object Tsaid_sale: TIntegerField
+      FieldName = 'id_sale'
+      Required = True
+    end
+    object Tsaid_client: TIntegerField
+      FieldName = 'id_client'
+    end
+    object Tsaid_item: TIntegerField
+      FieldName = 'id_item'
+    end
+    object Tsakol_vo: TIntegerField
+      FieldName = 'kol_vo'
+    end
+    object Tsadate_sale: TDateField
+      FieldName = 'date_sale'
+    end
+  end
+  object DScl: TDataSource
+    DataSet = Tcl
+    Left = 144
+    Top = 168
+  end
+  object DSit: TDataSource
+    DataSet = Tit
+    Left = 184
+    Top = 168
+  end
+  object DSca: TDataSource
+    DataSet = Tca
+    Left = 224
+    Top = 168
+  end
+  object DSsa: TDataSource
+    DataSet = Tsa
+    Left = 264
+    Top = 168
+  end
+end

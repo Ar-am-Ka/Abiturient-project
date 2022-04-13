@@ -1,0 +1,956 @@
+object Frep3: TFrep3
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #1055#1088#1080#1105#1084' '#1072#1073#1080#1090#1091#1088#1080#1077#1085#1090#1086#1074
+  ClientHeight = 445
+  ClientWidth = 608
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    608
+    445)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Frep3: TfrxPreview
+    Left = -5
+    Top = 0
+    Width = 611
+    Height = 443
+    OutlineVisible = False
+    OutlineWidth = 120
+    ThumbnailVisible = False
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    UseReportHints = True
+  end
+  object frxDBDataset1: TfrxDBDataset
+    UserName = 'frxDBD1'
+    CloseDataSource = False
+    DataSet = Qrep3det1
+    BCDToCurrency = False
+    Left = 80
+    Top = 224
+  end
+  object frxDBDataset2: TfrxDBDataset
+    UserName = 'frxDBD2'
+    CloseDataSource = False
+    DataSet = Qrep3det2
+    BCDToCurrency = False
+    Left = 80
+    Top = 272
+  end
+  object Qrep3det1: TQuery
+    Active = True
+    DatabaseName = 'DB1'
+    DataSource = DM.DSfac
+    ParamCheck = False
+    SQL.Strings = (
+      
+        'select enrollee.id_enr,last_name,first_name,patronymic_name,hono' +
+        'rs,admission.exam_1,admission.exam_2,results_exam from enrollee,' +
+        'admission,faculty,enrollment where enrollment.id_enr=enrollee.id' +
+        '_enr and enrollee.id_enr=admission.id_enr and admission.id_fac=f' +
+        'aculty.id_fac and faculty.id_fac=1 order by results_exam desc;')
+    Left = 32
+    Top = 240
+    object Qrep3det1id_enr: TIntegerField
+      FieldName = 'id_enr'
+      Origin = 'DB1.enrollee.id_enr'
+    end
+    object Qrep3det1last_name: TStringField
+      FieldName = 'last_name'
+      Origin = 'DB1.enrollee.last_name'
+    end
+    object Qrep3det1first_name: TStringField
+      FieldName = 'first_name'
+      Origin = 'DB1.enrollee.first_name'
+    end
+    object Qrep3det1patronymic_name: TStringField
+      FieldName = 'patronymic_name'
+      Origin = 'DB1.enrollee.patronymic_name'
+    end
+    object Qrep3det1honors: TStringField
+      FieldName = 'honors'
+      Origin = 'DB1.enrollee.honors'
+      Size = 1
+    end
+    object Qrep3det1exam_1: TSmallintField
+      FieldName = 'exam_1'
+      Origin = 'DB1.admission.exam_1'
+    end
+    object Qrep3det1exam_2: TSmallintField
+      FieldName = 'exam_2'
+      Origin = 'DB1.admission.exam_2'
+    end
+    object Qrep3det1results_exam: TIntegerField
+      FieldName = 'results_exam'
+      Origin = 'DB1.enrollment.results_exam'
+    end
+  end
+  object Qrep3det2: TQuery
+    Active = True
+    DatabaseName = 'DB1'
+    DataSource = DM.DSfac
+    ParamCheck = False
+    SQL.Strings = (
+      
+        'select enrollee.id_enr,last_name,first_name,patronymic_name,hono' +
+        'rs,admission.exam_1,admission.exam_2,results_exam from enrollee,' +
+        'admission,faculty,enrollment where enrollment.id_enr=enrollee.id' +
+        '_enr and enrollee.id_enr=admission.id_enr and admission.id_fac=f' +
+        'aculty.id_fac and faculty.id_fac=2 order by results_exam desc;')
+    Left = 32
+    Top = 288
+    object IntegerField1: TIntegerField
+      FieldName = 'id_enr'
+      Origin = 'DB1.enrollee.id_enr'
+    end
+    object StringField1: TStringField
+      FieldName = 'last_name'
+      Origin = 'DB1.enrollee.last_name'
+    end
+    object StringField2: TStringField
+      FieldName = 'first_name'
+      Origin = 'DB1.enrollee.first_name'
+    end
+    object StringField3: TStringField
+      FieldName = 'patronymic_name'
+      Origin = 'DB1.enrollee.patronymic_name'
+    end
+    object StringField4: TStringField
+      FieldName = 'honors'
+      Origin = 'DB1.enrollee.honors'
+      Size = 1
+    end
+    object SmallintField1: TSmallintField
+      FieldName = 'exam_1'
+      Origin = 'DB1.admission.exam_1'
+    end
+    object SmallintField2: TSmallintField
+      FieldName = 'exam_2'
+      Origin = 'DB1.admission.exam_2'
+    end
+    object Qrep3det2results_exam: TIntegerField
+      FieldName = 'results_exam'
+      Origin = 'DB1.enrollment.results_exam'
+    end
+  end
+  object Qrep3det3: TQuery
+    Active = True
+    DatabaseName = 'DB1'
+    DataSource = DM.DSfac
+    ParamCheck = False
+    SQL.Strings = (
+      
+        'select enrollee.id_enr,last_name,first_name,patronymic_name,hono' +
+        'rs,admission.exam_1,admission.exam_2,results_exam from enrollee,' +
+        'admission,faculty,enrollment where enrollment.id_enr=enrollee.id' +
+        '_enr and enrollee.id_enr=admission.id_enr and admission.id_fac=f' +
+        'aculty.id_fac and faculty.id_fac=3 order by results_exam desc;'
+      '')
+    Left = 32
+    Top = 336
+    object IntegerField4: TIntegerField
+      FieldName = 'id_enr'
+      Origin = 'DB1.enrollee.id_enr'
+    end
+    object StringField5: TStringField
+      FieldName = 'last_name'
+      Origin = 'DB1.enrollee.last_name'
+    end
+    object StringField6: TStringField
+      FieldName = 'first_name'
+      Origin = 'DB1.enrollee.first_name'
+    end
+    object StringField7: TStringField
+      FieldName = 'patronymic_name'
+      Origin = 'DB1.enrollee.patronymic_name'
+    end
+    object StringField8: TStringField
+      FieldName = 'honors'
+      Origin = 'DB1.enrollee.honors'
+      Size = 1
+    end
+    object SmallintField3: TSmallintField
+      FieldName = 'exam_1'
+      Origin = 'DB1.admission.exam_1'
+    end
+    object SmallintField4: TSmallintField
+      FieldName = 'exam_2'
+      Origin = 'DB1.admission.exam_2'
+    end
+    object Qrep3det3results_exam: TIntegerField
+      FieldName = 'results_exam'
+      Origin = 'DB1.enrollment.results_exam'
+    end
+  end
+  object Qrep3det4: TQuery
+    Active = True
+    DatabaseName = 'DB1'
+    DataSource = DM.DSfac
+    ParamCheck = False
+    SQL.Strings = (
+      
+        'select enrollee.id_enr,last_name,first_name,patronymic_name,hono' +
+        'rs,admission.exam_1,admission.exam_2,results_exam from enrollee,' +
+        'admission,faculty,enrollment where enrollment.id_enr=enrollee.id' +
+        '_enr and enrollee.id_enr=admission.id_enr and admission.id_fac=f' +
+        'aculty.id_fac and faculty.id_fac=4 order by results_exam desc;'
+      '')
+    Left = 32
+    Top = 384
+    object IntegerField7: TIntegerField
+      FieldName = 'id_enr'
+      Origin = 'DB1.enrollee.id_enr'
+    end
+    object StringField9: TStringField
+      FieldName = 'last_name'
+      Origin = 'DB1.enrollee.last_name'
+    end
+    object StringField10: TStringField
+      FieldName = 'first_name'
+      Origin = 'DB1.enrollee.first_name'
+    end
+    object StringField11: TStringField
+      FieldName = 'patronymic_name'
+      Origin = 'DB1.enrollee.patronymic_name'
+    end
+    object StringField12: TStringField
+      FieldName = 'honors'
+      Origin = 'DB1.enrollee.honors'
+      Size = 1
+    end
+    object SmallintField5: TSmallintField
+      FieldName = 'exam_1'
+      Origin = 'DB1.admission.exam_1'
+    end
+    object SmallintField6: TSmallintField
+      FieldName = 'exam_2'
+      Origin = 'DB1.admission.exam_2'
+    end
+    object Qrep3det4results_exam: TIntegerField
+      FieldName = 'results_exam'
+      Origin = 'DB1.enrollment.results_exam'
+    end
+  end
+  object frxDBDataset3: TfrxDBDataset
+    UserName = 'frxDBD3'
+    CloseDataSource = False
+    DataSet = Qrep3det3
+    BCDToCurrency = False
+    Left = 80
+    Top = 320
+  end
+  object frxDBDataset4: TfrxDBDataset
+    UserName = 'frxDBD4'
+    CloseDataSource = False
+    DataSet = Qrep3det4
+    BCDToCurrency = False
+    Left = 80
+    Top = 368
+  end
+  object frxReport1: TfrxReport
+    Version = '4.13.2'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    Preview = Frep3
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43848.970811643500000000
+    ReportOptions.LastChange = 43848.970811643500000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      ''
+      'begin'
+      ''
+      'end.')
+    Left = 16
+    Top = 184
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBD1'
+      end
+      item
+        DataSet = frxDBDataset2
+        DataSetName = 'frxDBD2'
+      end
+      item
+        DataSet = frxDBDataset3
+        DataSetName = 'frxDBD3'
+      end
+      item
+        DataSet = frxDBDataset4
+        DataSetName = 'frxDBD4'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object MasterData1: TfrxMasterData
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        Height = 37.795300000000000000
+        ParentFont = False
+        Top = 325.039580000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBD1'
+        RowCount = 0
+        object frxDBD1id_enr: TfrxMemoView
+          Width = 60.472480000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataField = 'id_enr'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapX = 5.000000000000000000
+          GapY = 5.000000000000000000
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[frxDBD1."id_enr"]')
+          ParentFont = False
+        end
+        object frxDBD1last_name: TfrxMemoView
+          Left = 60.472480000000000000
+          Width = 445.984540000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapX = 10.000000000000000000
+          GapY = 5.000000000000000000
+          Memo.UTF8W = (
+            
+              '[frxDBD1."last_name"] [frxDBD1."first_name"] [frxDBD1."patronymi' +
+              'c_name"]')
+          ParentFont = False
+        end
+        object frxDBD1exam_11: TfrxMemoView
+          Left = 506.457020000000000000
+          Width = 49.133890000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataField = 'exam_1'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD1."exam_1"]')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          Left = 555.590910000000000000
+          Width = 49.133890000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD1."exam_2"]')
+          ParentFont = False
+        end
+        object frxDBD1results_exam: TfrxMemoView
+          Left = 604.724800000000000000
+          Width = 64.252010000000000000
+          Height = 37.795300000000000000
+          ShowHint = False
+          DataField = 'results_exam'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD1."results_exam"]')
+          ParentFont = False
+        end
+        object frxDBD1honors: TfrxMemoView
+          Left = 668.976810000000000000
+          Width = 49.133890000000000000
+          Height = 37.795300000000000000
+          ShowHint = False
+          DataField = 'honors'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD1."honors"]')
+          ParentFont = False
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        Height = 20.000000000000000000
+        Top = 423.307360000000000000
+        Width = 718.110700000000000000
+        object Memo1: TfrxMemoView
+          Left = 642.520100000000000000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[Page#]')
+        end
+      end
+      object PageHeader2: TfrxPageHeader
+        Height = 245.669450000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo2: TfrxMemoView
+          Left = 555.590910000000000000
+          Top = 3.779530000000000000
+          Width = 143.622140000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Memo.UTF8W = (
+            #1054#1090' [Date]  [Time]')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          Top = 128.504020000000000000
+          Width = 718.110700000000000000
+          Height = 22.677180000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1050#1088#1099#1084#1089#1082#1080#1081' '#1060#1077#1076#1077#1088#1072#1083#1100#1085#1099#1081' '#1059#1085#1080#1074#1077#1088#1089#1080#1090#1077#1090' '#1080#1084#1077#1085#1080' '#1042'.'#1048'. '#1042#1077#1088#1085#1072#1076#1089#1082#1086#1075#1086)
+          ParentFont = False
+        end
+        object Picture1: TfrxPictureView
+          Left = 272.126160000000000000
+          Top = 3.779530000000000000
+          Width = 173.858380000000000000
+          Height = 120.944960000000000000
+          ShowHint = False
+          HightQuality = False
+          Transparent = False
+          TransparentColor = clWhite
+        end
+        object Memo5: TfrxMemoView
+          Top = 162.519790000000000000
+          Width = 718.110700000000000000
+          Height = 22.677180000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1060#1072#1082#1091#1083#1100#1090#1077#1090': '#1052#1077#1085#1077#1076#1078#1084#1077#1085#1090)
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          Top = 204.094620000000000000
+          Width = 60.472480000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'ID')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo7: TfrxMemoView
+          Left = 60.472480000000000000
+          Top = 204.094620000000000000
+          Width = 445.984540000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1060#1048#1054)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo8: TfrxMemoView
+          Left = 506.457020000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1054#1073#1097'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo9: TfrxMemoView
+          Left = 555.590910000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1052#1072#1090'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo10: TfrxMemoView
+          Left = 604.724800000000000000
+          Top = 204.094620000000000000
+          Width = 64.252010000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1057#1091#1084#1084#1072)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo11: TfrxMemoView
+          Left = 668.976810000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1054#1090#1083'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+    end
+    object Page2: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object MasterData2: TfrxMasterData
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        Height = 37.795300000000000000
+        ParentFont = False
+        Top = 325.039580000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset2
+        DataSetName = 'frxDBD2'
+        RowCount = 0
+        object Memo12: TfrxMemoView
+          Width = 60.472480000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapX = 5.000000000000000000
+          GapY = 5.000000000000000000
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[frxDBD2."id_enr"]')
+          ParentFont = False
+        end
+        object Memo13: TfrxMemoView
+          Left = 60.472480000000000000
+          Width = 445.984540000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapX = 10.000000000000000000
+          GapY = 5.000000000000000000
+          Memo.UTF8W = (
+            
+              '[frxDBD2."last_name"] [frxDBD2."first_name"] [frxDBD2."patronymi' +
+              'c_name"]')
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          Left = 506.457020000000000000
+          Width = 49.133890000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD2."exam_1"]')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          Left = 555.590910000000000000
+          Width = 49.133890000000000000
+          Height = 37.795275590000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD2."exam_2"]')
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          Left = 604.724800000000000000
+          Width = 64.252010000000000000
+          Height = 37.795300000000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD2."results_exam"]')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          Left = 668.976810000000000000
+          Width = 49.133890000000000000
+          Height = 37.795300000000000000
+          ShowHint = False
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBD1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 5.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBD2."honors"]')
+          ParentFont = False
+        end
+      end
+      object PageFooter2: TfrxPageFooter
+        Height = 20.000000000000000000
+        Top = 423.307360000000000000
+        Width = 718.110700000000000000
+        object Memo18: TfrxMemoView
+          Left = 642.520100000000000000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[Page#]')
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 245.669450000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo19: TfrxMemoView
+          Left = 555.590910000000000000
+          Top = 3.779530000000000000
+          Width = 143.622140000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Memo.UTF8W = (
+            #1054#1090' [Date]  [Time]')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          Top = 128.504020000000000000
+          Width = 718.110700000000000000
+          Height = 22.677180000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1050#1088#1099#1084#1089#1082#1080#1081' '#1060#1077#1076#1077#1088#1072#1083#1100#1085#1099#1081' '#1059#1085#1080#1074#1077#1088#1089#1080#1090#1077#1090' '#1080#1084#1077#1085#1080' '#1042'.'#1048'. '#1042#1077#1088#1085#1072#1076#1089#1082#1086#1075#1086)
+          ParentFont = False
+        end
+        object Picture2: TfrxPictureView
+          Left = 272.126160000000000000
+          Top = 3.779530000000000000
+          Width = 173.858380000000000000
+          Height = 120.944960000000000000
+          ShowHint = False
+          HightQuality = False
+          Transparent = False
+          TransparentColor = clWhite
+        end
+        object Memo21: TfrxMemoView
+          Top = 162.519790000000000000
+          Width = 718.110700000000000000
+          Height = 22.677180000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1060#1072#1082#1091#1083#1100#1090#1077#1090': '#1052#1077#1085#1077#1076#1078#1084#1077#1085#1090)
+          ParentFont = False
+        end
+        object Memo22: TfrxMemoView
+          Top = 204.094620000000000000
+          Width = 60.472480000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'ID')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo23: TfrxMemoView
+          Left = 60.472480000000000000
+          Top = 204.094620000000000000
+          Width = 445.984540000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1060#1048#1054)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo24: TfrxMemoView
+          Left = 506.457020000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1054#1073#1097'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo25: TfrxMemoView
+          Left = 555.590910000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1052#1072#1090'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo26: TfrxMemoView
+          Left = 604.724800000000000000
+          Top = 204.094620000000000000
+          Width = 64.252010000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1057#1091#1084#1084#1072)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo27: TfrxMemoView
+          Left = 668.976810000000000000
+          Top = 204.094620000000000000
+          Width = 49.133890000000000000
+          Height = 41.574803150000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          GapY = 10.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1054#1090#1083'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+    end
+  end
+end

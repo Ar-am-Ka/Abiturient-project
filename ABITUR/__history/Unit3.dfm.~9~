@@ -1,0 +1,128 @@
+object Fsets: TFsets
+  Left = 0
+  Top = 0
+  Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099
+  ClientHeight = 448
+  ClientWidth = 555
+  Color = clBtnHighlight
+  Font.Charset = RUSSIAN_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 20
+  object Label3: TLabel
+    Left = 8
+    Top = 8
+    Width = 57
+    Height = 20
+    Caption = #1044#1086#1089#1090#1091#1087'...'
+  end
+  object Breturn: TButton
+    Left = 465
+    Top = 416
+    Width = 75
+    Height = 25
+    Caption = #1053#1072#1079#1072#1076
+    TabOrder = 0
+    OnClick = BreturnClick
+  end
+  object PC1: TPageControl
+    Left = 8
+    Top = 34
+    Width = 233
+    Height = 344
+    ActivePage = TabSheet2
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
+      ExplicitLeft = 0
+      object GroupBox1: TGroupBox
+        Left = 0
+        Top = 3
+        Width = 222
+        Height = 303
+        Caption = #1057#1084#1077#1085#1072' PIN-'#1082#1086#1076#1072
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 11
+          Top = 82
+          Width = 134
+          Height = 20
+          Caption = #1053#1077#1087#1088#1072#1074#1080#1083#1100#1085#1099#1081' PIN'
+          Color = clBtnFace
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clRed
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          Visible = False
+        end
+        object Label2: TLabel
+          Left = 11
+          Top = 218
+          Width = 164
+          Height = 20
+          Caption = 'PIN-'#1082#1086#1076#1099' '#1085#1077' '#1089#1086#1074#1087#1072#1076#1072#1102#1090
+          Color = clBtnFace
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clRed
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          Visible = False
+        end
+        object LEpin1: TLabeledEdit
+          Left = 11
+          Top = 56
+          Width = 198
+          Height = 28
+          EditLabel.Width = 191
+          EditLabel.Height = 20
+          EditLabel.Caption = #1042#1074#1077#1076#1080#1090#1077' '#1089#1091#1097#1077#1089#1090#1074#1091#1102#1097#1080#1081' PIN'
+          TabOrder = 0
+        end
+        object Bsave1: TButton
+          Left = 48
+          Top = 259
+          Width = 105
+          Height = 33
+          Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+          TabOrder = 1
+          OnClick = Bsave1Click
+        end
+        object LEpin2: TLabeledEdit
+          Left = 11
+          Top = 136
+          Width = 198
+          Height = 28
+          EditLabel.Width = 133
+          EditLabel.Height = 20
+          EditLabel.Caption = #1042#1074#1077#1076#1080#1090#1077' '#1085#1086#1074#1099#1081' PIN'
+          TabOrder = 2
+        end
+        object LEpin3: TLabeledEdit
+          Left = 11
+          Top = 192
+          Width = 198
+          Height = 28
+          EditLabel.Width = 152
+          EditLabel.Height = 20
+          EditLabel.Caption = #1055#1086#1074#1090#1086#1088#1080#1090#1077' '#1085#1086#1074#1099#1081' PIN'
+          TabOrder = 3
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = #1052#1086#1076#1077#1088'/'#1040#1076#1084#1080#1085
+      ImageIndex = 1
+      ExplicitLeft = 0
+    end
+  end
+end

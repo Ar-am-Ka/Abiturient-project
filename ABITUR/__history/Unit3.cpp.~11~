@@ -1,0 +1,71 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "Unit5.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFsetacc *Fsetacc;
+
+
+//---------------------------------------------------------------------------
+__fastcall TFsetacc::TFsetacc(TComponent* Owner)
+	: TForm(Owner)
+{
+	//code
+}
+//---------------------------------------------------------------------------
+void __fastcall TFsetacc::BreturnClick(TObject *Sender)
+{
+	Fsetacc->Close();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFsetacc::Bsave1Click(TObject *Sender)
+{
+	DM->Tacc->Active=false;
+	DM->Tacc->Active=true;
+	DM->Tacc->Last();
+	bool flag=true;
+	if(LEpin1->Text!=DM->Tacccode->AsString) {
+		Label1->Visible=true;
+		flag=false;
+	} else { Label1->Visible=false; }
+	if(LEpin2->Text!=LEpin3->Text) {
+		Label2->Visible=true;
+		flag=false;
+	} else { Label2->Visible=false; }
+	if(flag){
+		DM->Tacc->Edit();
+		DM->Tacccode->AsString=LEpin2->Text;
+		DM->Tacc->Post();
+		Label1->Visible=false;
+		Label2->Visible=false;
+		LEpin1->Clear();
+		LEpin2->Clear();
+		LEpin3->Clear();
+
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFsetacc::Button3Click(TObject *Sender)
+{
+/*
+	DM->Tacc->Active=false;
+	DM->Tacc->Active=true;
+	DM->Tacc->First();
+	DM->Tacc->Next();
+	AnsiString in = "";
+	while (in!=DM->Tacccode->AsAnsiString)
+		in=InputBox("Доступ к системе: повышение статуса", "Для входа в режим модератора, введите PIN-код модератора\nPIN-код: ", "------");
+*/
+}
+//---------------------------------------------------------------------------
+
+
+

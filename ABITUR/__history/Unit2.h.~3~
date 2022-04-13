@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+class TAbt : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel1;
+	TButton *Button1;
+	TLabel *Label1;
+	TLabel *Label2;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TAbt(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TAbt *Abt;
+//---------------------------------------------------------------------------
+#endif
